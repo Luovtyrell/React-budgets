@@ -1,0 +1,18 @@
+.body{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-card {
+  width: 60rem;
+  height: 10rem;
+  background-image: linear-gradient(#e5e5f7 1px, transparent 1px), radial-gradient(#8ca9c8 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+  border: none;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
