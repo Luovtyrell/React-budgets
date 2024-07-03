@@ -1,4 +1,5 @@
 import "./BudgetHome.css";
+import TotalPrice from "../../components/TotalPrice/TotalPrice";
 
 const Home = () => {
   return (
@@ -13,10 +14,13 @@ const Home = () => {
       </nav>
       <div className="container d-flex justify-content-center align-items-center">
         <div className="card text-center custom-card">
-          <div className="card-body">
+          <div className="card-body-home">
             <h1>Aconsegueix la millor qualitat</h1>
           </div>
         </div>
+      </div>
+      <div className="container">
+        <TotalPrice />
       </div>
     </div>
   );

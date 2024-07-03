@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useState } from "react";
 import UseServiceList from "../../hooks/UseServiceList.jsx";
-import "./card.css"
+import "./card.css";
 
 export default function Card({ id }) {
   const serviceList = UseServiceList();
@@ -18,12 +19,16 @@ export default function Card({ id }) {
 
   return (
     <div className="container mt-5 d-flex justify-content-center align-items-center">
-      <div className="card">
-        <div className="card-body">
-          <div className="row">
+      <div className="card-component">
+        <div className="card-body-component">
+          <div className="row custom-row">
             <div className="col-md-4 ">
-              <h5 className="card-title custom-margin-left">{foundProductById.name}</h5>
-              <p className="card-text custom-margin-left">{foundProductById.description}</p>
+              <h5 className="card-title tittle-component-card custom-margin-left">
+                {foundProductById.name}
+              </h5>
+              <p className="card-text custom-margin-left">
+                {foundProductById.description}
+              </p>
             </div>
             <div className="col-md-4 d-flex align-items-center justify-content-center">
               <h3>{foundProductById.price} €</h3>
@@ -31,12 +36,12 @@ export default function Card({ id }) {
             <div className="col-md-4 d-flex align-items-center justify-content-center">
               <div className="col-md-4 d-flex align-items-center justify-content-center">
                 <input
-                className="checkbox"
+                  className="checkbox"
                   type="checkbox"
                   checked={selected}
                   onChange={handleSelect}
                 />
-                 Afegir
+                Afegir
               </div>
             </div>
           </div>
@@ -46,12 +51,9 @@ export default function Card({ id }) {
   );
 }
 
-{
-  /* <div>
-{services.map(service => (
-  <div key={service.id}>
-    <h3>{service.name}</h3>
-  </div>
-))}
-</div> */
-}
+Card.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  price: PropTypes.number,
+};

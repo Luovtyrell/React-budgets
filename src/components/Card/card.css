@@ -1,22 +1,36 @@
-.card-body {
+.card-body-component {
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
   border: 1px solid #ddd;
   font-size: small;
+  width: 650px;
+  height: 100px;
 }
 
-.card {
+.card-component {
   border-radius: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
+  box-shadow: 0 4px 0px #e5e5f7;
   width: 40rem;
 }
 
 .custom-margin-left {
-  margin-left: 2rem; 
+  margin-left: 2rem;
 }
 
 .checkbox {
   margin-right: 1rem;
+}
+
+.custom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.tittle-component-card {
+  background-color: #e5e5f7;
+  padding: 0.1em;
+  width: 45px;
 }

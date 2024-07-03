@@ -1,4 +1,4 @@
-.body{
+.body {
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -10,7 +10,7 @@
   border: none;
 }
 
-.card-body {
+.card-body-home {
   display: flex;
   justify-content: center;
   align-items: center;
