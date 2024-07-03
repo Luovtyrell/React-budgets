@@ -1,0 +1,22 @@
+.card-body {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
+  border: 1px solid #ddd;
+  font-size: small;
+}
+
+.card {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
+  width: 40rem;
+}
+
+.custom-margin-left {
+  margin-left: 2rem; 
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
