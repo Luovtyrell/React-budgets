@@ -3,9 +3,9 @@ import { useState } from "react";
 import UseServiceList from "../../hooks/UseServiceList.jsx";
 import "./card.css";
 
-export default function Card({ id }) {
+export default function Card({ id, onSelectionChange }) {
   const serviceList = UseServiceList();
-  const [selected, setSelected] = useState(false); // estado para manejar la selección
+  const [selected, setSelected] = useState(false);
   const foundProductById = serviceList.find((product) => product.id == id);
   console.log(foundProductById);
 
@@ -14,7 +14,8 @@ export default function Card({ id }) {
   }
 
   const handleSelect = () => {
-    setSelected(!selected); // cambiar el estado de selección al hacer clic en el botón
+    setSelected(!selected);
+    onSelectionChange(id, !selected);
   };
 
   return (
@@ -56,4 +57,5 @@ Card.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   price: PropTypes.number,
+  onSelectionChange: PropTypes.func,
 };
