@@ -20,7 +20,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
-        <TotalPrice />
+        <TotalPrice/>
       </div>
     </div>
   );
