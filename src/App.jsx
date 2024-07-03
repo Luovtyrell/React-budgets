@@ -1,7 +1,10 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home/BudgetHome";
+
 function App() {
   return (
     <>
-      <h1>React budgets</h1>
+      <Home />
     </>
   );
 }
