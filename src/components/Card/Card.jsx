@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import UseServiceList from "../../hooks/useServiceList.jsx";
-import useUpdateServiceListContext from "../../hooks/useUpdateServiceListContext.js";
+import UseServiceList from "../../hooks/UseServiceList";
+import useUpdateServiceListContext from "../../hooks/useUpdateServiceListContext.jsx";
 import "./card.css";
 
 export default function Card({ id }) {
-  const serviceList = UseServiceList(); //[{id: 1, title: "asdahsd", selected: true}, {}, {}]
-  const updateServiceList = useUpdateServiceListContext(); // function
+  const serviceList = UseServiceList();
+  const updateServiceList = useUpdateServiceListContext();
   const [selected, setSelected] = useState(false);
   const foundProductById = serviceList.find((product) => product.id == id);
 
