@@ -1,22 +1,18 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import UseServiceList from "../../hooks/UseServiceList.jsx";
+import UseServiceList from "../../hooks/useServiceList.jsx";
+import useUpdateServiceListContext from "../../hooks/useUpdateServiceListContext.js";
 import "./card.css";
 
-export default function Card({ id, onSelectionChange }) {
-  const serviceList = UseServiceList();
+export default function Card({ id }) {
+  const serviceList = UseServiceList(); //[{id: 1, title: "asdahsd", selected: true}, {}, {}]
+  const updateServiceList = useUpdateServiceListContext(); // function
   const [selected, setSelected] = useState(false);
   const foundProductById = serviceList.find((product) => product.id == id);
-  console.log(foundProductById);
 
   if (!foundProductById) {
     return <div>Product not found</div>;
   }
-
-  const handleSelect = () => {
-    setSelected(!selected);
-    onSelectionChange(id, !selected);
-  };
 
   return (
     <div className="container mt-5 d-flex justify-content-center align-items-center">
@@ -40,7 +36,10 @@ export default function Card({ id, onSelectionChange }) {
                   className="checkbox"
                   type="checkbox"
                   checked={selected}
-                  onChange={handleSelect}
+                  onChange={() => {
+                    updateServiceList(id, !selected);
+                    setSelected(!selected);
+                  }}
                 />
                 Afegir
               </div>
