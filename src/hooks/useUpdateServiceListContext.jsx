@@ -1,4 +1,6 @@
 import { useContext } from "react";
-import UpdateServiceListContext from "../context/UpdateServiceListContext.js";
+import UpdateServiceListContext from "../context/UpdateServiceListContext.jsx";
 
-export default () => useContext(UpdateServiceListContext);
+const useUpdateServiceListContext = () => useContext(UpdateServiceListContext);
+
+export default useUpdateServiceListContext;
