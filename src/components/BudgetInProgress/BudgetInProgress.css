@@ -1,0 +1,7 @@
+.dotted-separator {
+  border-top: 0.30rem dotted lightgray; /* 5px convertido a rem */
+  width: 60rem; /* Ajusta el ancho en rem */
+  margin: 0 auto; /* Centra la línea */
+  margin-top: 3.125rem; /* 50px convertido a rem */
+  display: flex;
+}

@@ -2,6 +2,7 @@ import "./BudgetHome.css";
 import TotalPrice from "../../components/TotalPrice/TotalPrice";
 import serviceList from "../../data/budgetData.json";
 import ServiceListProvider from "../../context/ServiceListProvider.jsx";
+import BudgetInProgress from "../../components/BudgetInProgress/BudgetInProgress.jsx";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <div className="container">
         <ServiceListProvider value={serviceList}>
           <TotalPrice />
+          <BudgetInProgress/>
         </ServiceListProvider>
       </div>
     </div>
