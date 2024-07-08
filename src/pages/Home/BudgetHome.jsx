@@ -3,6 +3,7 @@ import TotalPrice from "../../components/TotalPrice/TotalPrice";
 import serviceList from "../../data/budgetData.json";
 import ServiceListProvider from "../../context/ServiceListProvider.jsx";
 import BudgetInProgress from "../../components/BudgetInProgress/BudgetInProgress.jsx";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
             <img src="src/assets/hucha.png" width="30" height="24" />
             React budgets
           </span>
+          <Link to='/welcome'><button>Welcome page</button></Link>
         </div>
       </nav>
       <div className="container d-flex justify-content-center align-items-center">
