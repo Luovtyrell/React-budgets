@@ -1,0 +1,23 @@
+.button-page-web {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid rgb(156, 156, 156);
+  color: rgb(156, 156, 156);
+}
+
+.cantidad-seleccionada-web {
+  width: 25px;
+  height: 15px;
+  border-radius: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1.8px solid rgb(156, 156, 156);
+  color: rgb(156, 156, 156);
+}
