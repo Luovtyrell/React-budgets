@@ -1,0 +1,36 @@
+.form-body-component {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
+  border: 1px solid #ddd;
+  font-size: small;
+  width: 650px;
+  height: 200px;
+  padding: 0 12px;
+}
+
+.form-component {
+  border-radius: 20px;
+  box-shadow: 0 4px 0px #e5e5f7;
+  width: 40rem;
+}
+
+.form-title-container {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.form-custom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.button-form {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 0px #e5e5f7;
+}
