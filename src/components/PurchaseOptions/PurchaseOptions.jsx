@@ -22,30 +22,32 @@ export default function PurchaseOptions() {
   };
 
   return (
-    <div>
+    <>
       <div>
-        <button class="info-button">i</button>
-        <span>Nombre de pàgines:</span>
-        <button className="button-page-web" onClick={restarPages}>
-          -
-        </button>
-        <span className="cantidad-seleccionada-web">{pagesNumber}</span>
-        <button className="button-page-web" onClick={sumarPages}>
-          +
-        </button>
-      </div>
+        <div  className="purchase-option">
+          <button class="info-button">i</button>
+          <span>Nombre de pàgines:</span>
+          <button className="button-page-web" onClick={restarPages}>
+            -
+          </button>
+          <span className="cantidad-seleccionada-web">{pagesNumber}</span>
+          <button className="button-page-web" onClick={sumarPages}>
+            +
+          </button>
+        </div>
 
-      <div>
-        <button class="info-button">i</button>
-        <span>Nombre de llenguatges:</span>
-        <button className="button-page-web" onClick={restarLanguages}>
-          -
-        </button>
-        <span className="cantidad-seleccionada-web">{languagesNumber}</span>
-        <button className="button-page-web" onClick={sumarLanguages}>
-          +
-        </button>
+        <div  className="purchase-option">
+          <button class="info-button">i</button>
+          <span>Nombre de llenguatges:</span>
+          <button className="button-page-web" onClick={restarLanguages}>
+            -
+          </button>
+          <span className="cantidad-seleccionada-web">{languagesNumber}</span>
+          <button className="button-page-web" onClick={sumarLanguages}>
+            +
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

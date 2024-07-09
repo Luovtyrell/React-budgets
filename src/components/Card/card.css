@@ -5,7 +5,7 @@
   border: 1px solid #ddd;
   font-size: small;
   width: 650px;
-  height: 100px;
+  height: auto;
 }
 
 .card-component {

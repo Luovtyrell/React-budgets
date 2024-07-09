@@ -43,11 +43,18 @@ export default function Card({ id }) {
               />
               Afegir
             </div>
+          </div>
+          <div className="row custom-row">
+          <div className="d-flex justify-content-end ">
             {foundProductById.name == "Web" && selected ? (
               <PurchaseOptions />
             ) : null}
           </div>
         </div>
+
+
+        </div>
+        
       </div>
     </div>
   );
