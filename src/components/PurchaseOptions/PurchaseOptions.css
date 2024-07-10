@@ -31,23 +31,23 @@
 }
 
 .info-button {
-  width: 10px; /* Ajusta el tamaño según sea necesario */
-  height: 10px; /* Ajusta el tamaño según sea necesario */
-  border-radius: 50%; /* Hace el botón redondo */
-  border: none; /* Elimina el borde por defecto */
-  background-color: #e5e5f7; /* Color de fondo  */
-  color: #bcbcdd; /* Color del texto */
-  font-size: 8px; /* Tamaño de la fuente */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bcbcdd;
+  color: #ffffff;
+  font-size: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-  transition: background-color 0.3s ease; /* Transición para el efecto hover */
-  margin-right: 10px; /* Espacio a la derecha del botón */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
 }
 
 .info-button:hover {
-  background-color: #bcbcdd; /* Color de fondo al hacer hover */
-  color: #e5e5f7;
+  background-color: #e5e5f7;
+  color: #060606;
 }

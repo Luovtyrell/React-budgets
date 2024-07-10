@@ -45,7 +45,7 @@ export default function Card({ id }) {
             </div>
           </div>
           <div className="row custom-row">
-          <div className="d-flex justify-content-end ">
+          <div className="d-flex justify-content-end container-purchase-option">
             {foundProductById.name == "Web" && selected ? (
               <PurchaseOptions />
             ) : null}
