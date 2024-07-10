@@ -3,7 +3,6 @@
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
   border: 1px solid #ddd;
-  font-size: small;
   width: 650px;
   height: 200px;
   padding: 0 12px;
@@ -30,7 +29,20 @@
 }
 
 .button-form {
-  border: 1px solid #ddd;
+  border: 1px solid #a5a5c1;
   border-radius: 20px;
+  background-color: #bcbcdd;
+  font-size: 0.8rem;
+  color: #ffffff;
   box-shadow: 0 4px 0px #e5e5f7;
+}
+
+.button-form:hover {
+  background-color: #e5e5f7;
+  color: #a5a5c1;
+  box-shadow: 0 4px 0px #ffffff;
+}
+
+.form-control {
+  font-size: 0.8rem;
 }
