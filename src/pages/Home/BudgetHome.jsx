@@ -3,6 +3,7 @@ import TotalPrice from "../../components/TotalPrice/TotalPrice";
 import serviceList from "../../data/budgetData.json";
 import ServiceListProvider from "../../context/ServiceListProvider.jsx";
 import BudgetInProgress from "../../components/BudgetInProgress/BudgetInProgress.jsx";
+import Form from "../../components/Form/Form.jsx";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
       <div className="container">
         <ServiceListProvider value={serviceList}>
           <TotalPrice />
+          <Form/>
           <BudgetInProgress/>
         </ServiceListProvider>
       </div>
