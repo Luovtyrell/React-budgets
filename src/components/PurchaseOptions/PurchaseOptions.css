@@ -1,0 +1,53 @@
+.purchase-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; /* Espacio entre las opciones */
+}
+
+.button-page-web {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid rgb(156, 156, 156);
+  color: rgb(156, 156, 156);
+  margin: 0 5px;
+}
+
+.cantidad-seleccionada-web {
+  width: 25px;
+  height: 20px;
+  border-radius: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1.8px solid rgb(156, 156, 156);
+  color: rgb(156, 156, 156);
+  margin: 0 5px;
+}
+
+.info-button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bcbcdd;
+  color: #ffffff;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.info-button:hover {
+  background-color: #e5e5f7;
+  color: #060606;
+}
