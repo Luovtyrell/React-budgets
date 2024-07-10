@@ -3,6 +3,7 @@ import { useState } from "react";
 import UseServiceList from "../../hooks/UseServiceList";
 import useUpdateServiceListContext from "../../hooks/useUpdateServiceListContext.jsx";
 import "./card.css";
+import PurchaseOptions from "../PurchaseOptions/PurchaseOptions.jsx";
 
 export default function Card({ id }) {
   const serviceList = UseServiceList();
@@ -31,21 +32,29 @@ export default function Card({ id }) {
               <h3>{foundProductById.price} €</h3>
             </div>
             <div className="col-md-4 d-flex align-items-center justify-content-center">
-              <div className="col-md-4 d-flex align-items-center justify-content-center">
-                <input
-                  className="checkbox"
-                  type="checkbox"
-                  checked={selected}
-                  onChange={() => {
-                    updateServiceList(id, !selected);
-                    setSelected(!selected);
-                  }}
-                />
-                Afegir
-              </div>
+              <input
+                className="checkbox"
+                type="checkbox"
+                checked={selected}
+                onChange={() => {
+                  updateServiceList(id, !selected);
+                  setSelected(!selected);
+                }}
+              />
+              Afegir
             </div>
           </div>
+          <div className="row custom-row">
+          <div className="d-flex justify-content-end container-purchase-option">
+            {foundProductById.name == "Web" && selected ? (
+              <PurchaseOptions />
+            ) : null}
+          </div>
         </div>
+
+
+        </div>
+        
       </div>
     </div>
   );
