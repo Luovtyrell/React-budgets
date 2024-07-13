@@ -1,0 +1,25 @@
+.btn-main {
+  background-color: #e5e5f7;
+  box-shadow: 0 2px 0px #bcbcdd;
+  border: 1px solid #8ca9c8;
+  padding: 10px 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+  background-color: #bcbcdd;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.card-welcome {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(141, 141, 141, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 4px 0px #e5e5f7;
+  font-family: 'Courier New', Courier, monospace;
+}

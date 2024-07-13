@@ -16,3 +16,14 @@
   align-items: center;
   height: 100%;
 }
+
+.welcome-button {
+  background-color: #e5e5f7;
+  box-shadow: 0 2px 0px #bcbcdd;
+  border: #8ca9c8 1px solid,
+}
+
+.welcome-button:hover {
+  background-color: #bcbcdd;
+  border: none
+}
