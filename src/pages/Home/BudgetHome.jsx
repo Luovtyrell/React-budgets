@@ -15,7 +15,7 @@ const Home = () => {
             <img src="src/assets/hucha.png" width="30" height="24" />
             React budgets
           </span>
-          <Link to='/welcome'><button>Welcome page</button></Link>
+          <Link to='/welcome'><button className="welcome-button rounded-pill">Welcome page</button></Link>
         </div>
       </nav>
       <div className="container d-flex justify-content-center align-items-center">

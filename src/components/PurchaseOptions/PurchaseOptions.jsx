@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./purchaseOptions.css";
+import "./PurchaseOptions.css";
 
 export default function PurchaseOptions() {
   const [pagesNumber, setPagesNumber] = useState(0);
@@ -34,7 +34,7 @@ export default function PurchaseOptions() {
     <>
       <div>
         <div className="purchase-option">
-          <button onClick={infoNumberPages} class="info-button">
+          <button onClick={infoNumberPages} className="info-button">
             i
           </button>
           <span>Nombre de pàgines:</span>
@@ -80,7 +80,7 @@ export default function PurchaseOptions() {
         )}
 
         <div className="purchase-option">
-          <button onClick={infoNumberIdioms} class="info-button">
+          <button onClick={infoNumberIdioms} className="info-button">
             i
           </button>
           <span>Nombre de llenguatges:</span>
