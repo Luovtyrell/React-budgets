@@ -5,16 +5,18 @@
 }
 
 .button-page-web {
-  width: 15px;
-  height: 15px;
   border-radius: 50%;
+  border: none;
+  background-color: #bcbcdd;
+  color: white;
+  font-size: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border: 1px solid rgb(156, 156, 156);
-  color: rgb(156, 156, 156);
-  margin: 0 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px lightgray;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
 }
 
 .cantidad-seleccionada-web {

@@ -5,6 +5,7 @@ import ServiceListProvider from "../../context/ServiceListProvider.jsx";
 import BudgetInProgress from "../../components/BudgetInProgress/BudgetInProgress.jsx";
 import Form from "../../components/Form/Form.jsx";
 import { Link } from "react-router-dom";
+import { BudgetProvider } from "../../context/BudgetContext";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
             <img src="src/assets/hucha.png" width="30" height="24" />
             React budgets
           </span>
-          <Link to='/welcome'><button className="welcome-button rounded-pill">Welcome page</button></Link>
+          <Link to="/welcome">
+            <button className="welcome-button rounded-pill">Welcome page</button>
+          </Link>
         </div>
       </nav>
       <div className="container d-flex justify-content-center align-items-center">
@@ -27,9 +30,11 @@ const Home = () => {
       </div>
       <div className="container">
         <ServiceListProvider value={serviceList}>
-          <TotalPrice />
-          <Form/>
-          <BudgetInProgress/>
+          <BudgetProvider>
+            <TotalPrice />
+            <Form />
+            <BudgetInProgress />
+          </BudgetProvider>
         </ServiceListProvider>
       </div>
     </div>
