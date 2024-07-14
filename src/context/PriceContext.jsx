@@ -7,13 +7,20 @@ export const usePrice = () => useContext(PriceContext);
 
 export const PriceProvider = ({ children }) => {
   const [priceAdjustment, setPriceAdjustment] = useState(0);
+  const [discountApplied, setDiscountApplied] = useState(false);
 
   const adjustPrice = (amount) => {
     setPriceAdjustment((prevPrice) => prevPrice + amount);
   };
 
+  const toggleDiscount = () => {
+    setDiscountApplied(!discountApplied);
+  };
+
   return (
-    <PriceContext.Provider value={{ priceAdjustment, adjustPrice }}>
+    <PriceContext.Provider
+      value={{ priceAdjustment, adjustPrice, discountApplied, toggleDiscount }}
+    >
       {children}
     </PriceContext.Provider>
   );
