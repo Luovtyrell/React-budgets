@@ -6,6 +6,7 @@ import BudgetInProgress from "../../components/BudgetInProgress/BudgetInProgress
 import Form from "../../components/Form/Form.jsx";
 import { Link } from "react-router-dom";
 import { BudgetProvider } from "../../context/BudgetContext";
+import { PriceProvider } from "../../context/PriceContext.jsx";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container">
+        <PriceProvider>
         <ServiceListProvider value={serviceList}>
           <BudgetProvider>
             <TotalPrice />
@@ -36,6 +38,7 @@ const Home = () => {
             <BudgetInProgress />
           </BudgetProvider>
         </ServiceListProvider>
+        </PriceProvider>
       </div>
     </div>
   );
