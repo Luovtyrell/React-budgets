@@ -63,7 +63,8 @@ const PurchaseOptions = () => {
             tabIndex="-1"
             role="dialog"
             aria-labelledby="staticBackdropLabel"
-            aria-hidden="true">
+            aria-hidden="true"
+          >
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
@@ -74,12 +75,13 @@ const PurchaseOptions = () => {
                     type="button"
                     className="btn-close"
                     aria-label="Close"
-                    onClick={() => setShowInfoNumberPages(false)}></button>
+                    onClick={() => setShowInfoNumberPages(false)}
+                  ></button>
                 </div>
                 <div className="modal-body">
                   <p>
-                    Afageix les pàgines que necessites per a dur a terme el teu
-                    projecte. El cost de cada pàgina és de 30€.
+                    Afageix les pàgines que necessites per a dur a terme el
+                    teu projecte. El cost de cada pàgina és de 30€.
                   </p>
                 </div>
               </div>
@@ -106,7 +108,8 @@ const PurchaseOptions = () => {
             tabIndex="-1"
             role="dialog"
             aria-labelledby="staticBackdropLabel"
-            aria-hidden="true">
+            aria-hidden="true"
+          >
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
@@ -117,12 +120,13 @@ const PurchaseOptions = () => {
                     type="button"
                     className="btn-close"
                     aria-label="Close"
-                    onClick={() => setShowInfoNumberIdioms(false)}></button>
+                    onClick={() => setShowInfoNumberIdioms(false)}
+                  ></button>
                 </div>
                 <div className="modal-body">
                   <p>
-                    Afageix els llenguatges que tindrà el teu projecte. El cost
-                    de cada llenguatge és de 30€.
+                    Afageix els llenguatges que tindrà el teu projecte. El
+                    cost de cada llenguatge és de 30€.
                   </p>
                 </div>
               </div>
