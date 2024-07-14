@@ -21,14 +21,14 @@ export default function Card({ id }) {
         <div className="card-body-component">
           <div className="row custom-row">
             <div className="col-md-4 ">
-              <h5 className="card-title tittle-component-card custom-margin-left">
+              <h5 className="card-title tittle-component-card custom-margin-left mb-1">
                 {foundProductById.name}
               </h5>
-              <p className="card-text custom-margin-left">
+              <p className="card-text custom-margin-left mb-3">
                 {foundProductById.description}
               </p>
             </div>
-            <div className="col-md-4 d-flex align-items-center justify-content-center">
+            <div className="col-md-4 d-flex align-items-center justify-content-center mb-3">
               <h3>{foundProductById.price} €</h3>
             </div>
             <div className="col-md-4 d-flex align-items-center justify-content-center">
