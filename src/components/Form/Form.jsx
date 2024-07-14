@@ -79,7 +79,7 @@ function Form() {
               />
             </div>
             <div className="col-3">
-              <button className="button-form" type="submit">
+              <button className="submit-button rounded-pill" type="submit">
                 Sol·licitar pressupost
               </button>
             </div>

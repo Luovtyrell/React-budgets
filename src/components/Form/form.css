@@ -28,19 +28,17 @@
   padding-bottom: 20px;
 }
 
-.button-form {
-  border: 1px solid #a5a5c1;
-  border-radius: 20px;
-  background-color: #bcbcdd;
-  font-size: 0.8rem;
-  color: #ffffff;
-  box-shadow: 0 4px 0px #e5e5f7;
+.submit-button {
+  background-color: #e5e5f7;
+  box-shadow: 0 2px 0px #bcbcdd;
+  border: #8ca9c8 1px solid;
+  font-size: 14px;
 }
 
-.button-form:hover {
-  background-color: #e5e5f7;
-  color: #a5a5c1;
-  box-shadow: 0 4px 0px #ffffff;
+.submit-button:hover {
+  background-color: #bcbcdd;
+  border: none;
+  font-size: 13px;
 }
 
 .form-control {
