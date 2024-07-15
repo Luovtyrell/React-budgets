@@ -4,16 +4,22 @@ import UseServiceList from "../../hooks/UseServiceList";
 import useUpdateServiceListContext from "../../hooks/useUpdateServiceListContext.jsx";
 import "./card.css";
 import PurchaseOptions from "../PurchaseOptions/PurchaseOptions.jsx";
+import { usePrice } from "../../context/PriceContext";
 
 export default function Card({ id }) {
   const serviceList = UseServiceList();
   const updateServiceList = useUpdateServiceListContext();
+  const { discountApplied } = usePrice();
   const [selected, setSelected] = useState(false);
   const foundProductById = serviceList.find((product) => product.id == id);
 
   if (!foundProductById) {
     return <div>Product not found</div>;
   }
+
+  const discountedPrice = discountApplied
+    ? foundProductById.price * 0.8
+    : foundProductById.price;
 
   return (
     <div className="container mt-5 d-flex justify-content-center align-items-center">
@@ -29,7 +35,7 @@ export default function Card({ id }) {
               </p>
             </div>
             <div className="col-md-4 d-flex align-items-center justify-content-center mb-3">
-              <h3>{foundProductById.price} €</h3>
+              <h3>{discountedPrice} €</h3>
             </div>
             <div className="col-md-4 d-flex align-items-center justify-content-center">
               <input
@@ -45,16 +51,13 @@ export default function Card({ id }) {
             </div>
           </div>
           <div className="row custom-row">
-          <div className="d-flex justify-content-end container-purchase-option">
-            {foundProductById.name == "Web" && selected ? (
-              <PurchaseOptions />
-            ) : null}
+            <div className="d-flex justify-content-end container-purchase-option">
+              {foundProductById.name === "Web" && selected ? (
+                <PurchaseOptions />
+              ) : null}
+            </div>
           </div>
         </div>
-
-
-        </div>
-        
       </div>
     </div>
   );

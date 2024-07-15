@@ -18,7 +18,9 @@ const Home = () => {
             React budgets
           </span>
           <Link to="/welcome">
-            <button className="welcome-button rounded-pill">Welcome page</button>
+            <button className="welcome-button rounded-pill">
+              Welcome page
+            </button>
           </Link>
         </div>
       </nav>
@@ -31,13 +33,13 @@ const Home = () => {
       </div>
       <div className="container">
         <PriceProvider>
-        <ServiceListProvider value={serviceList}>
-          <BudgetProvider>
-            <TotalPrice />
-            <Form />
-            <BudgetInProgress />
-          </BudgetProvider>
-        </ServiceListProvider>
+          <ServiceListProvider value={serviceList}>
+            <BudgetProvider>
+              <TotalPrice />
+              <Form />
+              <BudgetInProgress />
+            </BudgetProvider>
+          </ServiceListProvider>
         </PriceProvider>
       </div>
     </div>
