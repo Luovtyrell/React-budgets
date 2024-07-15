@@ -99,9 +99,9 @@ function BudgetInProgress() {
         <div key={index} className="container mt-5">
           <div className="card-component">
             <div className="card-body-component">
-              <div className="row custom-row">
+              <div className="row custom-row-budget">
                 <div className="col-md-4">
-                  <h5 className="card-title tittle-component-card custom-margin-left">
+                  <h5 className="card-title name-client custom-margin-left">
                     {budget.name}
                   </h5>
                   <p className="card-text custom-margin-left">
