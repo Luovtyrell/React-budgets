@@ -96,7 +96,7 @@ function BudgetInProgress() {
       </div>
 
       {sortedBudgets.map((budget, index) => (
-        <div key={index} className="container mt-5">
+        <div key={index} className="container mt-5 d-flex justify-content-center align-items-center">
           <div className="card-component">
             <div className="card-body-component">
               <div className="row custom-row-budget">

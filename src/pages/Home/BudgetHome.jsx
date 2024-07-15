@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="body">
       <nav className="navbar">
-        <div className="container-fluid">
+        <div className="container-fluid mb-3">
           <span className="navbar-brand mb-0 ml-5 fs-6 fw-semibold">
             <img src="src/assets/hucha.png" width="30" height="24" />
             React budgets
