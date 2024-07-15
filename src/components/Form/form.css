@@ -43,4 +43,11 @@
 
 .form-control {
   font-size: 0.8rem;
+  outline: none
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #bcbcdd;
+  box-shadow: 0 0px 1px #bcbcdd inset, 0 0 1px#bcbcdd;
 }

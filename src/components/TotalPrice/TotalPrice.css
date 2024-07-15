@@ -1,8 +1,19 @@
 .form-check-input {
   background-color: #e0e0e0;
+  outline: none;
 }
 
 .form-check-input.checked {
-  background-color:  #bcbcdd; 
+  background-color: #bcbcdd;
+}
 
+.form-check-input:focus,
+.form-check-input.checked:focus {
+  outline: none;
+  border-color: #bcbcdd;
+  box-shadow: 0 0 2px 1px #bcbcdd;
+}
+
+.form-check-input.checked+.form-check-label {
+  background-color: #e5e5f7;
 }
