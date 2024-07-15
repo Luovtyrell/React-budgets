@@ -1,5 +1,5 @@
 .dotted-separator {
-  border-top: 0.30rem dotted lightgray;
+  border-top: 0.3rem dotted lightgray;
   width: 60rem;
   margin: 0 auto;
   margin-top: 3.125rem;
@@ -17,11 +17,25 @@
 }
 
 .search-box {
-  outline: none 
+  outline: none;
 }
 
 .search-box:focus {
   outline: none;
-  border-color: #bcbcdd; 
+  border-color: #bcbcdd;
   box-shadow: 0 0px 1px #bcbcdd inset, 0 0 1px#bcbcdd;
+}
+
+.name-client {
+  background-color: #e5e5f7;
+  padding: 0.1em;
+}
+
+.custom-row-budget{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
