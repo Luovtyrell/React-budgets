@@ -35,7 +35,7 @@ const TotalPrice = () => {
             checked={discountApplied}
             onChange={handleDiscountToggle}
           />
-          <label className="form-check-label" htmlFor="discountSwitch">
+          <label className="form-check-label">
             Aplica el 20% amb el pagament anual
           </label>
         </div>
