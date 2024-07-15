@@ -8,6 +8,7 @@ function BudgetInProgress() {
   const [nameOrderAsc, setNameOrderAsc] = useState(true);
   const [dateOrderAsc, setDateOrderAsc] = useState(true);
   const [priceOrderAsc, setPriceOrderAsc] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     setSortedBudgets([...budgets]);
@@ -19,7 +20,7 @@ function BudgetInProgress() {
         ? a.name.localeCompare(b.name)
         : b.name.localeCompare(a.name);
     });
-    setSortedBudgets(sorted);
+    applySearch(sorted);
     setNameOrderAsc(!nameOrderAsc);
   };
 
@@ -29,7 +30,7 @@ function BudgetInProgress() {
         ? new Date(a.date) - new Date(b.date)
         : new Date(b.date) - new Date(a.date);
     });
-    setSortedBudgets(sorted);
+    applySearch(sorted);
     setDateOrderAsc(!dateOrderAsc);
   };
 
@@ -39,33 +40,63 @@ function BudgetInProgress() {
         ? a.totalPrice - b.totalPrice
         : b.totalPrice - a.totalPrice;
     });
-    setSortedBudgets(sorted);
+    applySearch(sorted);
     setPriceOrderAsc(!priceOrderAsc);
+  };
+
+  const applySearch = (sortedBudgets) => {
+    if (searchTerm.trim() !== "") {
+      const filtered = sortedBudgets.filter((budget) =>
+        budget.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setSortedBudgets(filtered);
+    } else {
+      setSortedBudgets(sortedBudgets);
+    }
+  };
+
+  const handleSearchInputChange = (e) => {
+    setSearchTerm(e.target.value);
   };
 
   return (
     <div className="container mt-5 mb-5">
       <div className="dotted-separator">
-        <div className="container mt-5 d-flex justify-content-between">
+        <div className="container mt-5 d-flex justify-content-between align-items-center">
           <h3>Pressupostos en curs:</h3>
-          <div className="sort-buttons">
-            <button onClick={sortAlphabetically} className="btn btn-sort me-2">
-              Nom {nameOrderAsc ? "↑" : "↓"}
-            </button>
-            <button onClick={sortByDate} className="btn btn-sort me-2">
-              Data {dateOrderAsc ? "↑" : "↓"}
-            </button>
-            <button onClick={sortByPrice} className="btn btn-sort me-2">
-              Import {priceOrderAsc ? "↑" : "↓"}
-            </button>
+          <div className="d-flex align-items-center">
+            <div className="search-container me-3">
+              <input
+                type="text"
+                placeholder="🔎 Cerca per nom..."
+                value={searchTerm}
+                onChange={handleSearchInputChange}
+                className="form-control search-box"
+              />
+            </div>
+            <div className="sort-buttons">
+              <button
+                onClick={sortAlphabetically}
+                className={`btn btn-sort me-2 ${nameOrderAsc ? 'btn-sort-active-up' : 'btn-sort-active-down'}`}>
+                Nom {nameOrderAsc ? "↑" : "↓"}
+              </button>
+              <button
+                onClick={sortByDate}
+                className={`btn btn-sort me-2 ${dateOrderAsc ? 'btn-sort-active-up' : 'btn-sort-active-down'}`}>
+                Data {dateOrderAsc ? "↑" : "↓"}
+              </button>
+              <button
+                onClick={sortByPrice}
+                className={`btn btn-sort me-2 ${priceOrderAsc ? 'btn-sort-active-up' : 'btn-sort-active-down'}`}>
+                Import {priceOrderAsc ? "↑" : "↓"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {sortedBudgets.map((budget, index) => (
-        <div
-          key={index}
-          className="container mt-5 d-flex justify-content-center align-items-center">
+        <div key={index} className="container mt-5">
           <div className="card-component">
             <div className="card-body-component">
               <div className="row custom-row">

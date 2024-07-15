@@ -15,3 +15,13 @@
   border-color: #bcbcdd;
   background-color: #e5e5f7;
 }
+
+.search-box {
+  outline: none 
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #bcbcdd; 
+  box-shadow: 0 0px 1px #bcbcdd inset, 0 0 1px#bcbcdd;
+}
