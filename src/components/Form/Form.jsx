@@ -2,10 +2,12 @@ import "./form.css";
 import { useState, useContext } from "react";
 import BudgetContext from "../../context/BudgetContext";
 import UseServiceList from "../../hooks/UseServiceList";
+import { usePrice } from "../../context/PriceContext";
 
 function Form() {
   const { addBudget } = useContext(BudgetContext);
   const serviceListContext = UseServiceList();
+  const { discountApplied } = usePrice();
   const [values, setValues] = useState({
     name: "",
     phone: "",
@@ -22,10 +24,15 @@ function Form() {
     const selectedServices = serviceListContext.filter(
       (service) => service.selected
     );
-    const totalPrice = selectedServices.reduce(
+
+    let totalPrice = selectedServices.reduce(
       (total, service) => total + service.price,
       0
     );
+
+    if (discountApplied) {
+      totalPrice *= 0.8;
+    }
 
     const budget = {
       ...values,
