@@ -14,13 +14,17 @@ function BudgetInProgress() {
     setSortedBudgets([...budgets]);
   }, [budgets]);
 
+  useEffect(() => {
+    applyFilters();
+  }, [searchTerm, budgets]);
+
   const sortAlphabetically = () => {
     const sorted = [...sortedBudgets].sort((a, b) => {
       return nameOrderAsc
         ? a.name.localeCompare(b.name)
         : b.name.localeCompare(a.name);
     });
-    applySearch(sorted);
+    setSortedBudgets(sorted);
     setNameOrderAsc(!nameOrderAsc);
   };
 
@@ -30,7 +34,7 @@ function BudgetInProgress() {
         ? new Date(a.date) - new Date(b.date)
         : new Date(b.date) - new Date(a.date);
     });
-    applySearch(sorted);
+    setSortedBudgets(sorted);
     setDateOrderAsc(!dateOrderAsc);
   };
 
@@ -40,19 +44,20 @@ function BudgetInProgress() {
         ? a.totalPrice - b.totalPrice
         : b.totalPrice - a.totalPrice;
     });
-    applySearch(sorted);
+    setSortedBudgets(sorted);
     setPriceOrderAsc(!priceOrderAsc);
   };
 
-  const applySearch = (sortedBudgets) => {
+  const applyFilters = () => {
+    let filtered = [...budgets];
+
     if (searchTerm.trim() !== "") {
-      const filtered = sortedBudgets.filter((budget) =>
+      filtered = filtered.filter((budget) =>
         budget.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
-      setSortedBudgets(filtered);
-    } else {
-      setSortedBudgets(sortedBudgets);
     }
+
+    setSortedBudgets(filtered);
   };
 
   const handleSearchInputChange = (e) => {
