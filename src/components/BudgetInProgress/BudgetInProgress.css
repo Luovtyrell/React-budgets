@@ -1,7 +1,17 @@
 .dotted-separator {
   border-top: 0.30rem dotted lightgray;
   width: 60rem;
-  margin: 0 auto; 
-  margin-top: 3.125rem; 
+  margin: 0 auto;
+  margin-top: 3.125rem;
   display: flex;
+}
+
+.btn-sort {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-sort:hover {
+  border-color: #bcbcdd;
+  background-color: #e5e5f7;
 }
