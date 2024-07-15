@@ -26,7 +26,7 @@ export default function Card({ id }) {
       <div className="card-component">
         <div className="card-body-component">
           <div className="row custom-row">
-            <div className="col-md-4 ">
+            <div className="col-md-4">
               <h5 className="card-title tittle-component-card custom-margin-left mb-1">
                 {foundProductById.name}
               </h5>
@@ -34,7 +34,10 @@ export default function Card({ id }) {
                 {foundProductById.description}
               </p>
             </div>
-            <div className="col-md-4 d-flex align-items-center justify-content-center mb-3">
+            <div className="col-md-4 d-flex flex-column align-items-center mb-3">
+              {discountApplied && (
+                <div className="discount-label mb-2">Estalvia 20%</div>
+              )}
               <h3>{discountedPrice} €</h3>
             </div>
             <div className="col-md-4 d-flex align-items-center justify-content-center">
