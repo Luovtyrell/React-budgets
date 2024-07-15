@@ -15,5 +15,5 @@
 }
 
 .form-check-input.checked+.form-check-label {
-  background-color: #e5e5f7;
+  background-color: rgb(255, 210, 193);
 }
