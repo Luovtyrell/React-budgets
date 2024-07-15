@@ -14,7 +14,7 @@ const Home = () => {
       <nav className="navbar">
         <div className="container-fluid mb-3">
           <span className="navbar-brand mb-0 ml-5 fs-6 fw-semibold">
-            <img src="src/assets/hucha.png" width="30" height="24" />
+            <img src="src/assets/hucha.svg" width="30" height="24" />
             React budgets
           </span>
           <Link to="/welcome">
